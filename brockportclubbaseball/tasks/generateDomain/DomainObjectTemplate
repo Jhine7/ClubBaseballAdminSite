@@ -1,0 +1,25 @@
+<?php
+
+namespace domain\base;
+
+ /**
+  * This is a generated class. Do not edit.
+  */
+class {{CLASS_NAME}} extends {{PARENT_CLASS}} {
+    {{CONSTANTS}}
+    function __construct($registerNew=true){
+        self::addAttributes();
+        {{SUPER_CALL}}{{REGISTER_NEW}}
+    }
+
+    protected function addAttributes() {
+        {{ATTRIBUTES_TO_ADD}}
+    }
+
+    public function getTable() {
+        return "{{TABLE_NAME}}";
+    }
+
+    {{GETTERS_AND_SETTERS}}
+}
+?>

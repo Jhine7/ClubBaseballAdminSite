@@ -1,0 +1,21 @@
+application: brockportclubbaseballstats
+version: 1
+runtime: php55
+api_version: 1
+
+handlers:
+#- url: /json/test
+#  script: helloworld.php
+#- url: /.*
+#  script: index.phps
+- url: /css
+  static_dir: common/css
+  expiration: "0m"
+- url: /js
+  static_dir: common/js
+  expiration: "0m"
+- url: /images
+  static_dir: common/images
+  expiration: "0m"
+- url: /.*
+  script: mod_rewrite.php

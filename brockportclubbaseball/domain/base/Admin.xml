@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain>
+    <attributes>
+        <attribute name="adminId" type="INT"/>
+        <attribute name="adminName" type="STRING"/>
+        <attribute name="adminPassword" type="STRING"/>
+    </attributes>
+    <mapper name="AdminMapper" class="Admin" table="admins" idField="adminId"/>
+</domain>

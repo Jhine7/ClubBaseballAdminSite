@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+           More info: h5bp.com/b/378 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Brockport Club Baseball Stats Console</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+    <link rel="icon" type="image/png" href="/images/bport_favicon.ico" />
+
+    <!-- CSS: implied media=all -->
+    <!-- CSS concatenated and minified via ant build script-->
+    <link href="/css/main_css.css" rel="stylesheet" type="text/css" />
+    <!--<link rel="stylesheet" href="/applelearningfw_1/common/js/libs/aloha/css/aloha.css" type="text/css" />-->
+    <!--<link rel="stylesheet" href="/applelearningfw_1/common/js/libs/validationEngine/validationEngine.jquery.css" type="text/css"/>-->
+    <!-- end CSS-->
+
+    <!-- All JavaScript at the bottom-->
+    <script src='/js/jquery-1.7.min.js'></script>
+    <script src='/js/jquery-ui-1.8.19.custom.min.js'></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <!--<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>-->
+    <!--[if IE]>
+    <script type="text/javascript">
+        (function(){
+            var html5elmeents = "address|article|aside|audio|canvas|command|datalist|details|dialog|figure|figcaption|footer|header|hgroup|keygen|mark|meter|menu|nav|progress|ruby|section|time|video".split('|');
+            for(var i = 0; i < html5elmeents.length; i++){
+                document.createElement(html5elmeents[i]);
+            }
+        }
+                )();
+    </script>
+    <![endif]-->
+
+</head>
+<body id="bcb_body">
+<section id="headerWrapper" class="clearfix">
+    <header id="headerContent" class="clearfix">
+        <a href="/">Brockport Club Baseball Stats Console</a>
+        <div id="{{ALViewElement_loggerElement}}" class="logged_in">
+            <p>Logout</p>
+        </div>
+    </header>
+</section>
+<main id="mainContentWrapper">
+    <section id="{{ALViewElement_errorSec}}">
+
+    </section>
+    <section id="{{ALViewElement_confirmSec}}">
+
+    </section>
+    <header class="page_header">
+        Add Player:
+    </header>
+    <section class="box_element">
+        <form method="post" id="addPlayerForm">
+            <span class="form_sec">
+            <label for="firstName">First Name:</label>
+            <input name="firstName" id="firstName" maxlength="150" type="text">
+        </span>
+
+        <span class="form_sec">
+             <label for="lastName">Last Name:</label>
+             <input name="lastName" id="lastName" maxlength="150" type="text">
+        </span>
+
+            <input type="hidden" name="addPlayerFormSubmit">
+            <button type="submit"  id="submitAddPlayerButton" class="fancyButton fancyButton-hvr">Save</button>
+        </form>
+    </section>
+</main>
+<script src="/js/jquery-1.7.min.js"></script>
+<script src='/js/jquery-ui-1.8.19.custom.min.js'></script>
+<script src="/js/main_js.js"></script>
+</body>
+</html>

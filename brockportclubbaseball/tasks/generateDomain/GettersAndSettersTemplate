@@ -1,0 +1,14 @@
+    public function get{{CONSTANT_NAME}}() {
+        return $this->findAttribute({{CLASS_NAME}}::{{CONSTANT}})->getValue();
+    }
+
+    public function set{{CONSTANT_NAME}}($val) {
+        ${{CONSTANT_NORMAL_CASE}} = $this->findAttribute({{CLASS_NAME}}::{{CONSTANT}});
+        $oldValue = ${{CONSTANT_NORMAL_CASE}}->getValue();
+        ${{CONSTANT_NORMAL_CASE}}->setValue($val);
+        if($oldValue !== $val && $this->isNew === false) {
+            ${{CONSTANT_NORMAL_CASE}}->setChanged(true);
+            \base\Registry::getUnitOfWork()->registerDirty($this);
+        }
+    }
+

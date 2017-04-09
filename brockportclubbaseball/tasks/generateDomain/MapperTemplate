@@ -1,0 +1,4 @@
+public function loadDataMap() {
+    // This is an auto generated method. Do not edit.
+    $this->dataMap = new DataMap("{{CLASS_NAME}}", "{{TABLE_NAME}}", "{{ID_FIELD}}");{{JOINS}}
+}

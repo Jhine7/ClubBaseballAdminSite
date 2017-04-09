@@ -1,0 +1,5 @@
+
+        if($registerNew === true) {
+            $this->isNew = true;
+            \base\Registry::getUnitOfWork()->registerNew($this);
+        }

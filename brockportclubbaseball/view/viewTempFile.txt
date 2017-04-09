@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><!-- Use the .htaccess and remove these lines to avoid edge case issues.
+           More info: h5bp.com/b/378 --><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Apple Learning</title><meta name="description" content=""><meta name="author" content=""><!-- Mobile viewport optimized: j.mp/bplateviewport --><meta name="viewport" content="width=device-width,initial-scale=1"><!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons --><link rel="icon" type="image/png" href="/applelearningfw/common/images/favicon.png"><!-- CSS: implied media=all --><!-- CSS concatenated and minified via ant build script--><link href="/applelearningfw/common/css/redesign_css.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/applelearningfw/common/js/libs/aloha/css/aloha.css" type="text/css"><!-- end CSS--><!-- All JavaScript at the bottom--><script src="/applelearningfw/common/js/jquery-1.7.min.js"></script><script src="/applelearningfw/common/js/jquery-ui-1.8.19.custom.min.js"></script><link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Condiment"><!--[if IE]>
+    <script type="text/javascript">
+        (function(){
+            var html5elmeents = "address|article|aside|audio|canvas|command|datalist|details|dialog|figure|figcaption|footer|header|hgroup|keygen|mark|meter|menu|nav|progress|ruby|section|time|video".split('|');
+            for(var i = 0; i < html5elmeents.length; i++){
+                document.createElement(html5elmeents[i]);
+            }
+        }
+                )();
+    </script>
+    <![endif]--></head><body>
+<div id="wrapper">
+    {{TOP_BAR}}
+    <section id="middleSection" class="secWrapper bigBottom"><header id="middleSectionHeader">
+            {{USER_NAME}}
+        </header><div id="quoteBox" class="clearfix">
+            {{QUOTE_SECTION}}
+        </div>
+    </section><section id="bottomSection" class="secWrapper clearfix"><section id="boxesPanel"><!--{{PROFILE_BOX}}--><!--{{LOGIN_ASIDE}}--><!--{{OTHER_PAGE_BOX}}--><!--{{FRIENDS_BOX}}--></section><section id="contentPanel"></section><!-- TODO: Problem is above the resume element matches the first /section it comes to so it doesn't get it's full thing - that's why changed it to section1, etc --><!-- TODO: If want to stay with this somewhat bad/hacky solution, need to be sure to put it back to not having number before displaying html --><!-- TODO: Also, this whole resume ViewElement is reusable in JobApplications so probably want to put the ViewElement on contentPanel and put resume in a different file alone --></section><div id="lightbox-panel">
+    </div><!-- /lightbox-panel -->
+
+    <div id="lightbox"> </div><!-- /lightbox -->
+</div>
+<script src="/applelearningfw/common/js/jquery-1.7.min.js"></script><script src="/applelearningfw/common/js/jquery-ui-1.8.19.custom.min.js"></script><script src="/applelearningfw/common/js/libs/aloha/lib/aloha.js" data-aloha-plugins="common/format, common/list, common/link"></script><script src="/applelearningfw/common/js/libs/aloha/lib/require.js"></script><script src="/applelearningfw/common/js/redesign_js.js"></script></body></html>

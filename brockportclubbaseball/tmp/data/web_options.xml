@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applelearning>
+    <option name="dsn">mysql:unix_socket=/cloudsql/brockportclubbaseballstats:brockportclubbaseballstats;dbname=brockportclubbaseballstats;charset=utf8</option>
+    <option name="cookiename">brockportClubBaseballStatsCookName</option>
+    <option name="cookiepass">brockportClubBaseballStatsCookPass</option>
+</applelearning>

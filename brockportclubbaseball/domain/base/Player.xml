@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain>
+    <attributes>
+        <attribute name="playerId" type="INT"/>
+        <attribute name="playerFirstName" type="STRING"/>
+        <attribute name="playerLastName" type="STRING"/>
+    </attributes>
+    <mapper name="PlayerMapper" class="Player" table="players" idField="playerId"/>
+</domain>

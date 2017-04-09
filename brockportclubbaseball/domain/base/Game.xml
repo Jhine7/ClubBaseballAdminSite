@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain>
+    <attributes>
+        <attribute name="gameId" type="INT"/>
+        <attribute name="vs" type="STRING"/>
+        <attribute name="month" type="INT"/>
+        <attribute name="day" type="INT"/>
+        <attribute name="year" type="INT"/>
+        <attribute name="won" type="INT"/>
+    </attributes>
+    <mapper name="GameMapper" class="Game" table="game" idField="gameId"/>
+</domain>

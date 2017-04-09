@@ -1,0 +1,8 @@
+<section id="loginSection" class="clearfix"><form action="" id="loginForm" onsubmit="return loginFormValidation();">
+        <span class="loginOptions registerPart">New here? <a href="/applelearningfw/register" class="linkAway">Register.</a></span><br><label for="displayName">Display Name:</label>
+        <input id="displayName" type="text" class="inputMBottom"><label for="password">Password:</label>
+        <input id="password" type="password"><span class="loginOptions"><a href="/applelearningfw/forgotPassword" class="linkAway">Forgot Password?</a></span>
+        <button type="submit" class="fancyButton">Login</button>
+        <div id="loginErrorMessage" class="errorMsgConsistent clearfix"></div>
+    </form>
+</section>

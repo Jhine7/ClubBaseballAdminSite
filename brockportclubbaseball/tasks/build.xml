@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="FooBar" default="dist">
+    <!--<taskdef name="numberfiles" classname="GetNumberOfFilesInDirectory" />-->
+    <taskdef name="generatedomain" classname="generateDomain.GenerateDomain" />
+    <taskdef name="generateview" classname="generateViews.GenerateView" />
+
+    <!-- ============================================  -->
+    <!-- Target: prepare                               -->
+    <!-- ============================================  -->
+    <target name="prepare">
+        <!--<echo msg="Making directory ./build" />-->
+        <!--<mkdir dir="./build" />-->
+
+        <echo msg="Deleting generated PHP files" />
+        <delete>
+            <fileset dir="../domain/base">
+                <include name="*.php" />
+            </fileset>
+        </delete>
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: build                                 -->
+    <!-- ============================================  -->
+    <target name="build" depends="prepare">
+        <!--<numberfiles dir="../command" ></numberfiles>&lt;!&ndash; This is how you create your own task &ndash;&gt;-->
+
+        <!--<touch file="./testDir/something1.txt" datetime="10/10/1999 09:31 AM" />-->
+
+        <foreach param="filename" absparam="absname" target="subtask">
+            <fileset dir="../domain/base">
+                <include name="*.xml"/>
+            </fileset>
+        </foreach>
+
+        <foreach param="file" absparam="absname" target="viewgenerator">
+            <fileset dir="../commands">
+                <include name="*/view/*.html"/>
+            </fileset>
+        </foreach>
+
+        <!--<echo msg="Copying ./GetNumberOfFilesInDirectory.php to ./build directory..." />-->
+        <!--<copy file="./GetNumberOfFilesInDirectory.php" tofile="./build/GetNumberOfFilesInDirectory.php" overwrite="true">-->
+        <!--<filterchain>-->
+        <!--<replaceregexp>-->
+        <!--<regexp pattern="{{.*}}" replace="REPLACEMENT"/>-->
+        <!--</replaceregexp>-->
+        <!--</filterchain>-->
+        <!--</copy>-->
+
+        <!--<reflexive>-->
+        <!--<fileset dir="./build">-->
+        <!--<include name="*.php"  />-->
+        <!--</fileset>-->
+        <!--<filterchain>-->
+        <!--<replaceregexp>-->
+        <!--<regexp pattern="REPLACEMENT" replace="REPLACEMENT 2"/>-->
+        <!--</replaceregexp>-->
+        <!--</filterchain>-->
+        <!--</reflexive>-->
+
+
+    </target>
+
+    <target name="subtask" >
+        <echo msg="Generating Domain: ${filename}" />
+        <generatedomain name="${filename}"/>
+    </target>
+
+    <target name="viewgenerator" >
+        <echo msg="Generating View: ${absname}" />
+        <generateview name="${absname}"/>
+    </target>
+
+    <!-- ============================================  -->
+    <!-- (DEFAULT)  Target: dist                       -->
+    <!-- ============================================  -->
+    <target name="dist" depends="build">
+        <echo msg="Creating archive..." />
+    </target>
+</project>
